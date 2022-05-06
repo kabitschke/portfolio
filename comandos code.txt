@@ -1,0 +1,14 @@
+shift+alt+f = formatar documento
+alt = seleciona varias linhas para edi��o
+! preenche o html
+div.container = cria a div e ja inclui a class
+Selecionar um texto e apertar ALT para mover
+
+
+
+
+
+https://unsplash.com/photos/DuHKoV44prg
+unsplash
+uigradiente
+https://www.webfx.com/tools/emoji-cheat-sheet/     EMOJIS
