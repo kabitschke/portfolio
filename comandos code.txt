@@ -56,6 +56,8 @@ git pull origin Recebe os arquivos
 
 git clone urldoprojeto
 
+git remote -v Para onde o repositorio está apontando
+
 
 ----------------------------------------------------------
 
