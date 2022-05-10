@@ -1,14 +1,17 @@
 # Portfólio
 
-Portfólio do desenvolvedor
+Meu Portfólio
 
 ## Tarefas
 
 O controle das tarefas desse projeto será realizado no GitHub
 
-## Icones
+## Ícones
 
-:package: Nova funcionalidade
-:up: Atualização
-:beetle: Correção de bug
-:checkered_flag: release
+- :package: nova funcionalidade
+- :up: atualização
+- :beetle: correção de bug
+- :checkered_flag: release
+
+### Teste 
+:up: 

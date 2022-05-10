@@ -61,7 +61,7 @@
 .hamburguer span{
     position: absolute;
     left: 3rem;
-    background-color: #f83600;
+    background-color: #f83600; 
     height: 2rem;
     width: 6rem;
     display: flex;
@@ -301,7 +301,7 @@ header{
     font-family: var(--font-primary);
     font-size: 3rem;
     color: #4b4b4b;
-    border-bottom: solid 3px #fe8c00;
+    border-bottom: solid 3px #f83600;
     
     margin-bottom: 1.5rem;
 
@@ -337,6 +337,89 @@ header{
 .conhecimento-img-wrapper img{
     object-fit: cover;
     width: 80%;
+   
+}
+
+.projetos{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.card{
+    width: 18rem;
+    height: 25rem;
+    position: relative;/*faz o texto ficar dentro*/
+}
+
+.card-img-wrapper{   
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border-radius: .5rem;
+}
+
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;   
+    opacity: .8;   
+    transition: opacity .3s; 
+}
+.card-img-wrapper img{
+    opacity: .5;
 }
 
 
+.card-info{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 2rem;
+    text-shadow: 0.3rem 0.1rem 0.3rem rgba(0, 0, 0, .4);
+    transition: all 3s;
+}
+
+.card-info h2{
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #f83600;
+}
+
+.card-info h3{
+    font-family: var(--font-secundary);
+    font-weight: bolder;
+    color: #FFF;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p{
+    font-family: var(--font-secundary);
+    color: #eee;
+    font-weight: 400;
+    width: 80%;   
+    margin-bottom: 2rem; 
+}
+
+.card-info button{    
+    width: 8rem;
+    height: 2.5rem;
+    background: #fe8c00;  
+    background: -webkit-linear-gradient(to right, #f83600, #000); 
+    background: linear-gradient(to left, #f83600, #000); 
+    font-family: var(--font-action);
+    font-size: 1rem;
+    color: #eee;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+}
+
+.card:hover .card-info{
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
