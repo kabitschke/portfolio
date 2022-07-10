@@ -15,6 +15,10 @@
     --font-action: "Mulish",serif;
 }
 
+html{
+    scroll-behavior: smooth;/*suavizar*/
+}
+
 .hamburguer{
     width: 2rem;
     height: 2rem;
@@ -190,6 +194,7 @@ header{
     top: 0;
     right: -20rem;
     transition: all 1s; /*Suavizar abertura e fechamento*/
+    z-index: 1; /*Fica por cima de outros elementos */
 }
 
 .show-menu .sidebar{
@@ -593,6 +598,61 @@ header{
 
 .sessao-orcamento input[type="checkbox"]{    
     width: 1rem;       
+}
+
+/*------------------------------------Footer-------------------------------------------*/
+
+footer{
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p{
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.social-list a{
+    margin: 0 2rem;
+    color:#a7a7a7;
+    font-size: 1.3rem;
+}
+
+
+
+
+.social-list ul{
+    display: flex;
+
+}
+
+#link-topo{/*botao topo*/
+    position: fixed; /*Deixa o objeto na mesma posição*/
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background: #fe8c00;  
+    background: -webkit-linear-gradient(to right, #f83600, #000); 
+    background: linear-gradient(to left, #f83600, #000);
+    box-shadow: .05rem .05rem  #000;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    
+    
 }
 
 

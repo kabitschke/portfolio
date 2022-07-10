@@ -25,7 +25,7 @@
 
 
 
-        <header>
+        <header id="Home">
             <div class="img-wrapper"><img src="imagens/bg.jpg" alt=""></div>
 
             <div class="banner">
@@ -40,11 +40,11 @@
 
             <nav>
                 <ul class="menu">
-                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Conhecimento</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Projetos</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Contatos</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Orçamento</a></li>
+                    <li class="menu-item"><a href="#Home" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="#Conhecimentos" class="menu-link">Conhecimento</a></li>
+                    <li class="menu-item"><a href="#Projetos" class="menu-link">Projetos</a></li>
+                    <li class="menu-item"><a href="#Contatos" class="menu-link">Contatos</a></li>
+                    <li class="menu-item"><a href="#Orcamento" class="menu-link">Orçamento</a></li>
                 </ul>
             </nav>
 
@@ -57,7 +57,7 @@
 
         </aside>
 
-        <section class="sessao-conhecimentos">
+        <section class="sessao-conhecimentos" id="Conhecimentos">
             <div class="sessao-header">
                 <h1>Conhecimentos</h1>
             </div>
@@ -134,7 +134,7 @@
             </div>
         </section>
 
-        <section class="sessao-projetos">
+        <section class="sessao-projetos" id="Projetos">
             <div class="sessao-header">
                 <h1>Projetos</h1>
             </div>
@@ -189,7 +189,7 @@
          </div>
         </section>
 
-        <section class="sessao-contato">
+        <section class="sessao-contato" id="Contatos">
 
             <div class="contato-wrapper">
                 <div class="contato-left"></div>
@@ -223,7 +223,7 @@
 
         </section>
 
-        <section class="sessao-orcamento">
+        <section class="sessao-orcamento" id="Orcamento">
 
             <div class="orcamento-wrapper">
                 <h1>Faça um orçamento</h1>
@@ -247,13 +247,33 @@
                     </div>
 
                     <label for="prazo">Prazo</label>
-                    <input type="range" name="prazo" id="prazo">
+                    <input type="range" name="prazo" id="prazo" min="1" max="10">
+                    <label id="preco">R$ 0,00</label>
                     <button type="submit" class="btn btn-orcamento">Enviar</button>
                 </form>
             </div>
 
 
         </section>
+
+        <footer>
+            <div class="footer-content">
+                <p>
+                    Copyright &copy 2022, Kabitschke MK - Todos os direitos reservados
+                </p>
+                <div class="social-list">
+                 <ul>
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                 </ul>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#Home" id="link-topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
 
 
 
