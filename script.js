@@ -11,6 +11,9 @@ document.querySelector("#layout-nao").addEventListener("change", atualizaPreco)
 document.querySelector("#prazo").addEventListener("change", function (){
     const prazo = document.querySelector("#prazo").value
     document.querySelector("label[for=prazo]").innerHTML = `Prazo: ${prazo} Semanas`
+    if(prazo == 1){
+        document.querySelector("label[for=prazo]").innerHTML = `Prazo: ${prazo} Semana`
+    }
     atualizaPreco()
 })
 
@@ -30,4 +33,3 @@ function atualizaPreco(){
     
     document.querySelector("#preco").innerHTML = `R$ ${preco.toFixed(2)}`
 }
-
