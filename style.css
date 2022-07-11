@@ -249,6 +249,8 @@ header{
 
 }
 
+/******************************************Conhecimentos**************************************/
+
 .conhecimentos{
     height: 100%;
     display: grid;
@@ -343,6 +345,8 @@ header{
    
 }
 
+/*************************************************Projetos****************************************/
+
 .projetos{
     display: flex;
     justify-content: space-evenly;
@@ -431,6 +435,8 @@ header{
     visibility: visible;
 
 }
+
+/********************************Contato*****************************************/
 
 .sessao-contato{
     width: 100%;
@@ -632,7 +638,7 @@ footer{
 
 }
 
-#link-whatsapp{/*botao topo*/
+#link-whatsapp{/*Whatsapp*/
     position: fixed; /*Deixa o objeto na mesma posição*/
     right: 3rem;
     bottom: 3rem;
@@ -645,4 +651,45 @@ footer{
     align-items: center;
     justify-content: center;
     color: #FFF;    
+}
+
+@media (min-width:450px) and (max-width:1000px) {    
+    .conhecimento-img-wrapper img{
+        display: none;      
+    }
+
+    .conhecimentos{
+        display: flex;
+        justify-content: space-between;  
+        flex-wrap: wrap;          
+        justify-content: center;             
+    }
+
+    .conhecimento p{
+        width: 18rem;
+        height: 8rem; 
+        padding-right: 1rem;
+        text-align: justify;      
+    }
+
+
+
+
+   /*********************Projetos*********************/
+
+   .projetos{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;    
+}
+
+    .card{
+    margin-bottom: 2rem;
+}
+
+
+   
+    
+
+
 }
