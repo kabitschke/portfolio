@@ -159,22 +159,28 @@ header{
 
 }
 
-.banner button{
+.banner .whatsapp{
+    width: 30%;
     font-family: var(--font-action);
     color: #fff;
     font-size: 1.2rem;
     letter-spacing: .1rem;
     border-radius: 5px;
     cursor: pointer;
-    text-transform: uppercase;
-    background: #434343;  
-    background: -webkit-linear-gradient(to right, #000000, #434343); 
-    background: linear-gradient(to left, #000000, #434343); 
+    text-transform: uppercase;    
+    background-color: #58d565;
     padding: 1rem 4rem 1rem 4rem; /*height right botton left*/ 
     border: none;
     opacity: 0;
     animation: moveBanner 1s 0.9s forwards;
 
+}
+
+.whatsapp i{
+    position: fixed;
+    left:2.5rem;
+    color: #FFFFFF;
+    font-size: 1.5rem;
 }
 
 
@@ -643,20 +649,20 @@ footer{
 
 }
 
-#link-whatsapp{/*Whatsapp*/
-    position: fixed; /*Deixa o objeto na mesma posição*/
+/*#link-whatsapp{
+    position: fixed; 
     right: 3rem;
     bottom: 3rem;
     width: 4rem;
     height: 4rem;   
-    font-size: 3.2rem; /*tamanho do icone*/
+    font-size: 3.2rem; 
     background: #58d565; 
     border-radius: 2rem;        
     display: flex;
     align-items: center;
     justify-content: center;
     color: #FFF;    
-}
+}*/
 
 @media (max-width:1000px) {    
     .conhecimento-img-wrapper img{
@@ -721,6 +727,11 @@ footer{
 }
 
 @media (max-width:850px) {
+
+    .banner{           
+        top: 15%;
+        left: 10%;      
+    }
     /*Contato*/
     .sessao-contato{
         height: 100%;
@@ -781,6 +792,25 @@ footer{
 
     @media (max-width:700px) {
         /*Contato*/
+        .banner{           
+            top: 15%;
+            left: 7%;      
+        }
+    
+        .banner .whatsapp{
+            font-size: 1rem;
+            padding: 1rem 2rem 1rem 2rem;
+            text-align: center;
+        }
+    
+        .whatsapp i{
+            position: fixed;
+            left: 1.5rem;
+            top: 1rem;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+        }    
+       
 
     .contato-right{
         width: 75%;   
@@ -824,6 +854,7 @@ footer{
     .footer-content p{
       font-size: 1rem;
     }
+ 
 
 
 
@@ -833,14 +864,33 @@ footer{
 }
 
 @media (max-width:450px) {
+
     /*Banner*/
-    .banner{           
-        top: 15%;
-        left: 8%;      
+    .banner h1{
+        font-size: 2.5rem;
     }
-    .banner button{
-        display: none;
-        }    
+
+    .banner p{
+        font-size: 1.5rem;
+    }
+    .banner{           
+        top: 20%;
+        left: 7%;      
+    }
+
+    .banner .whatsapp{
+        font-size: 1rem;
+        padding: 1rem 2rem 1rem 2rem;
+    }
+
+    .whatsapp i{
+        position: fixed;
+        left: 0.5rem;
+        top: 1rem;
+        color: #FFFFFF;
+        font-size: 1.5rem;
+    }
+     
         /*Conhecimento*/
     .conhecimento-img-wrapper img{
         display: none;      
@@ -908,11 +958,13 @@ footer{
         height: 1rem;
     }       
 
-    #link-whatsapp{/*Whatsapp*/    
+    /*#link-whatsapp{/*Whatsapp   
         width: 2.5rem;
         height: 2.5rem;   
-        font-size: 2.1rem; /*tamanho do icone*/           
-    }
+        font-size: 2.1rem; /*tamanho do icone           
+    }*/
+
+ 
 
       
 
