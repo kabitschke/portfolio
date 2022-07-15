@@ -2,28 +2,31 @@
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
 
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
 }
 
-:root{ /*Facilitar a troca de Fonte no Projeto*/
+:root {
+    /*Facilitar a troca de Fonte no Projeto*/
     --font-primary: "Baloo Da 2", serif;
     --font-secundary: "Josefin Slab", serif;
-    --font-action: "Mulish",serif;
+    --font-action: "Mulish", serif;
 }
 
-html{
-    scroll-behavior: smooth;/*suavizar*/
+html {
+    scroll-behavior: smooth;
+    /*suavizar*/
 }
 
-.hamburguer{
+.hamburguer {
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;/*tras o objeto a frente*/
+    z-index: 100;
+    /*tras o objeto a frente*/
     right: 2rem;
     top: 2rem;
     display: flex;
@@ -33,39 +36,39 @@ html{
 
 }
 
-.show-menu .hamburguer{
+.show-menu .hamburguer {
     right: 16rem;
 }
 
-.line{
+.line {
     width: 100%;
     height: .1rem;
     background-color: #FFF;
     box-shadow: .1rem .1rem 1px #000;
     transition: transform 1s;
-    
+
 }
 
-.show-menu #line1{
+.show-menu #line1 {
     transform: rotate(45deg) translate(.3rem, .45rem);
 
 }
 
-.show-menu #line3{
+.show-menu #line3 {
     transform: rotate(-45deg) translate(.3rem, -.4rem);
 
 }
 
-.show-menu #line2{
+.show-menu #line2 {
     opacity: 0;
     visibility: hidden;
 
 }
 
-.hamburguer span{
+.hamburguer span {
     position: absolute;
     left: 3rem;
-    background-color: #85e328; 
+    background-color: #85e328;
     height: 2rem;
     width: 6rem;
     display: flex;
@@ -78,7 +81,8 @@ html{
 
 }
 
-.hamburguer span::before{/*faz a setinha*/
+.hamburguer span::before {
+    /*faz a setinha*/
     content: "";
     position: absolute;
     border-right: .5rem solid #85e328;
@@ -88,55 +92,58 @@ html{
     left: -1rem;
 }
 
-.show-menu .hamburguer:hover span{
+.show-menu .hamburguer:hover span {
     opacity: 1;
 
 }
 
-header{
+header {
     width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;
-   
+
 }
-.img-wrapper{    
+
+.img-wrapper {
     height: 100vh;
-    overflow: hidden;    
+    overflow: hidden;
     background-position: bottom;
     background-size: cover;
     animation: zoom 5s;
-    background-color:rgba(0, 0, 0); 
-   
+    background-color: rgba(0, 0, 0);
+
 }
 
 
 
-.img-wrapper img{
+.img-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;/*cobrir a div*/     
+    object-fit: cover;
+    /*cobrir a div*/
     animation: zoom 10s;
     opacity: 0.5;
 }
 
-@keyframes zoom{
-    0%{
+@keyframes zoom {
+    0% {
         transform: scale(1.3);
     }
-    100%{
+
+    100% {
         transform: scale(1);
     }
 }
 
-.banner{
+.banner {
     position: absolute;
     top: 30%;
-    left: 15%;  
+    left: 15%;
 
 }
 
-.banner h1{
+.banner h1 {
     color: #FFFFFF;
     font-size: 3.5rem;
     font-family: var(--font-primary);
@@ -147,7 +154,7 @@ header{
     animation: moveBanner 1s 0.5s forwards;
 }
 
-.banner p{
+.banner p {
     font-family: var(--font-secundary);
     color: #fff;
     font-size: 2rem;
@@ -159,7 +166,7 @@ header{
 
 }
 
-.banner .whatsapp{
+.banner .whatsapp {
     width: 30%;
     font-family: var(--font-action);
     color: #fff;
@@ -167,53 +174,57 @@ header{
     letter-spacing: .1rem;
     border-radius: 5px;
     cursor: pointer;
-    text-transform: uppercase;    
+    text-transform: uppercase;
     background-color: #58d565;
-    padding: 1rem 4rem 1rem 4rem; /*height right botton left*/ 
+    padding: 1rem 4rem 1rem 4rem;
+    /*height right botton left*/
     border: none;
     opacity: 0;
     animation: moveBanner 1s 0.9s forwards;
 
 }
 
-.whatsapp i{
+.whatsapp i {
     position: fixed;
-    left:2.5rem;
+    left: 2.5rem;
     color: #FFFFFF;
     font-size: 1.5rem;
 }
 
 
 @keyframes moveBanner {
-    0%{
+    0% {
         transform: translateY(10rem) rotateY(-30deg);
     }
-    100%{
+
+    100% {
         transform: translateY(0) rotateY(0);
         opacity: 1;
 
     }
-    
+
 }
 
 
-.sidebar{
+.sidebar {
     width: 20rem;
     height: 100vh;
     background-color: #FFF;
     position: fixed;
     top: 0;
     right: -20rem;
-    transition: all 1s; /*Suavizar abertura e fechamento*/
-    z-index: 1; /*Fica por cima de outros elementos */
+    transition: all 1s;
+    /*Suavizar abertura e fechamento*/
+    z-index: 1;
+    /*Fica por cima de outros elementos */
 }
 
-.show-menu .sidebar{
+.show-menu .sidebar {
     right: 0;
 
 }
 
-.menu{
+.menu {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -221,12 +232,12 @@ header{
 
 }
 
-.menu-item{
+.menu-item {
     text-align: center;
     margin-bottom: .5rem;
 }
 
-.menu-link{
+.menu-link {
     font-family: var(--font-action);
     font-size: 2rem;
     color: #555;
@@ -234,21 +245,21 @@ header{
 
 }
 
-.menu-link:hover{
+.menu-link:hover {
     color: #85e328;
 }
 
-.social-media{
+.social-media {
     position: absolute;
     bottom: 2rem;
-    width: 100%;    
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
-.social-media i{
-    background: -webkit-linear-gradient(to right, #000000, #434343); 
-    background: linear-gradient(to left, #000000, #434343); 
+.social-media i {
+    background: -webkit-linear-gradient(to right, #000000, #434343);
+    background: linear-gradient(to left, #000000, #434343);
     color: #FFF;
     height: 3rem;
     width: 3rem;
@@ -256,13 +267,13 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;  
+    border-radius: 50%;
 
 }
 
 /******************************************Conhecimentos**************************************/
 
-.conhecimentos{
+.conhecimentos {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
@@ -270,127 +281,133 @@ header{
     row-gap: .5rem;
 }
 
-.conhecimento:nth-child(1){
-    grid-column: 4 / 7; /*começa na coluna 4 e termina na 7*/
-    grid-row: 1 / 3;  /*começa na linha 1 e termina na 3*/
+.conhecimento:nth-child(1) {
+    grid-column: 4 / 7;
+    /*começa na coluna 4 e termina na 7*/
+    grid-row: 1 / 3;
+    /*começa na linha 1 e termina na 3*/
 }
 
-.conhecimento:nth-child(2){
-    grid-column: 3 / 6; 
-    grid-row: 3 / 5;  
+.conhecimento:nth-child(2) {
+    grid-column: 3 / 6;
+    grid-row: 3 / 5;
 }
 
-.conhecimento:nth-child(3){
-    grid-column: 4 / 7; 
-    grid-row: 5 / -1;  
+.conhecimento:nth-child(3) {
+    grid-column: 4 / 7;
+    grid-row: 5 / -1;
 }
 
-.conhecimento:nth-child(4){
-    grid-column: 11 / 14; 
-    grid-row: 1 / 3;  
+.conhecimento:nth-child(4) {
+    grid-column: 11 / 14;
+    grid-row: 1 / 3;
 }
 
-.conhecimento:nth-child(5){
-    grid-column: 12 / 15; 
-    grid-row: 3 / 5;  
+.conhecimento:nth-child(5) {
+    grid-column: 12 / 15;
+    grid-row: 3 / 5;
 }
 
-.conhecimento:nth-child(6){
-    grid-column: 11 / 14; 
-    grid-row: 5 / -1;  
+.conhecimento:nth-child(6) {
+    grid-column: 11 / 14;
+    grid-row: 5 / -1;
 }
 
-.sessao-conhecimentos{
+.sessao-conhecimentos {
     background-color: #f5f5f5;
 }
 
-.sessao-header{
+.sessao-header {
     display: flex;
-    align-items: center; /*vertical*/
+    align-items: center;
+    /*vertical*/
     justify-content: center;
 
 }
 
-.conhecimento-header{
+.conhecimento-header {
     display: flex;
 }
 
-.sessao-header h1{
+.sessao-header h1 {
     font-family: var(--font-primary);
     font-size: 3rem;
     color: #4b4b4b;
-    border-bottom: solid 3px #85e328;    
+    border-bottom: solid 3px #85e328;
     margin-bottom: 1.5rem;
 }
 
-.conhecimento-header{
+.conhecimento-header {
     display: flex;
     align-items: center;
     color: #4b4b4b;
 }
 
-.conhecimento-header i{
+.conhecimento-header i {
     font-size: 2.5rem;
 
 }
 
-.conhecimento-header h3{
+.conhecimento-header h3 {
     font-family: var(--font-secundary);
     font-size: 2rem;
     padding-left: 1rem;
 }
 
-.conhecimento-text{
+.conhecimento-text {
     font-family: var(--font-secundary);
     margin-top: 1rem;
 }
 
-.conhecimento-img-wrapper{
+.conhecimento-img-wrapper {
     grid-column: 7 / 11;
     grid-row: 2 / 6;
     width: 100%;
 }
-.conhecimento-img-wrapper img{
+
+.conhecimento-img-wrapper img {
     object-fit: cover;
     width: 80%;
-   
+
 }
 
 /*************************************************Projetos****************************************/
 
-.projetos{
+.projetos {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 2rem;
 }
 
-.card{
+.card {
     width: 18rem;
     height: 25rem;
-    position: relative;/*faz o texto ficar dentro*/
+    position: relative;
+    /*faz o texto ficar dentro*/
 }
 
-.card-img-wrapper{   
+.card-img-wrapper {
     width: 100%;
     height: 100%;
     background-color: #000;
     border-radius: .5rem;
 }
 
-.card-img-wrapper img{
+.card-img-wrapper img {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    border-radius: .5rem;   
-    opacity: .8;   
-    transition: opacity .3s; 
+    border-radius: .5rem;
+    opacity: .8;
+    transition: opacity .3s;
 }
-.card-img-wrapper img{
+
+.card-img-wrapper img {
     opacity: .5;
 }
 
 
-.card-info{
+.card-info {
     position: absolute;
     bottom: 0;
     opacity: 0;
@@ -400,32 +417,32 @@ header{
     transition: all 3s;
 }
 
-.card-info h2{
+.card-info h2 {
     font-family: var(--font-primary);
     font-size: 2rem;
     font-weight: 500;
     color: #85e328;
 }
 
-.card-info h3{
+.card-info h3 {
     font-family: var(--font-secundary);
     font-weight: bolder;
     color: #FFF;
     margin-bottom: 1.5rem;
 }
 
-.card-info p{
+.card-info p {
     font-family: var(--font-secundary);
     color: #eee;
     font-weight: 400;
-    width: 80%;   
-    margin-bottom: 2rem; 
+    width: 80%;
+    margin-bottom: 2rem;
 }
 
-.btn{
-    background: #434343;  
-    background: -webkit-linear-gradient(to right, #000000, #434343); 
-    background: linear-gradient(to left, #000000, #434343); 
+.btn {
+    background: #434343;
+    background: -webkit-linear-gradient(to right, #000000, #434343);
+    background: linear-gradient(to left, #000000, #434343);
     font-family: var(--font-action);
     font-size: 1rem;
     color: #eee;
@@ -435,12 +452,12 @@ header{
 
 }
 
-.card-info button{    
+.card-info button {
     width: 8rem;
-    height: 2.5rem;    
+    height: 2.5rem;
 }
 
-.card:hover .card-info{
+.card:hover .card-info {
     bottom: 2rem;
     opacity: 1;
     visibility: visible;
@@ -449,7 +466,7 @@ header{
 
 /********************************Contato*****************************************/
 
-.sessao-contato{
+.sessao-contato {
     width: 100%;
     height: 100vh;
     background-color: #272727;
@@ -458,26 +475,28 @@ header{
     justify-content: center;
 }
 
-.contato-wrapper{
+.contato-wrapper {
     width: 60%;
     height: 30rem;
     display: flex;
-    box-shadow: 0 2rem 3rem rgba(0,0,0,0.5);
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
 
 }
 
-.contato-left{
+.contato-left {
     width: 35%;
-    background: linear-gradient(rgba(15,15,15,0.6), rgba(22,22,22,0.9)), url(imagens/contato.jpg); /*Efeito escurecido na imagem*/
+    background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)), url(imagens/contato.jpg);
+    /*Efeito escurecido na imagem*/
     background-size: cover;
 }
-.contato-right{
+
+.contato-right {
     width: 65%;
     background-color: #eee;
     padding: 1rem 3rem 3rem 3rem;
 }
 
-.sessao-contato h1{
+.sessao-contato h1 {
     width: 100%;
     text-align: center;
     font-family: var(--font-primary);
@@ -486,24 +505,24 @@ header{
     font-weight: lighter;
 }
 
-.sessao-contato form{
+.sessao-contato form {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.input-group{
+.input-group {
     position: relative;
 }
 
-.input-group textarea{
+.input-group textarea {
     padding-top: 1rem;
     max-width: 25rem;
     max-height: 3;
 }
 
-.field{
+.field {
     background: transparent;
     border: none;
     width: 20rem;
@@ -516,7 +535,7 @@ header{
 
 }
 
-.field-label{
+.field-label {
     position: absolute;
     left: 0;
     top: 2rem;
@@ -526,35 +545,40 @@ header{
     transition: all 0.3s;
 }
 
-.field:focus ~ label{ /*faz o esquema do label subir*/
+.field:focus~label {
+    /*faz o esquema do label subir*/
     top: 0;
     font-size: 1rem;
 }
 
-.field:focus{
+.field:focus {
     border-bottom: 1px solid#636363;
 }
 
-.btn_submit{
+.btn_submit {
     font-size: 1.2rem;
     text-transform: uppercase;
     width: 80%;
     height: 2rem;
     margin-top: 1rem;
 }
+
 /*------------------------------------Sessao Orcamento-------------------------------------------*/
-.sessao-orcamento{
+.sessao-orcamento {
     width: 100%;
     height: 100vh;
     background-color: #f5f5f5;
-   /* background: url("./imagens/bg-orcamento.jpeg");*/
-   /* object-fit: cover;*/
-    display: flex; /*alinhamento pai*/
-    justify-content: center;/*alinhamento*/
-    align-items: center;/*alinhamento*/
+    /* background: url("./imagens/bg-orcamento.jpeg");*/
+    /* object-fit: cover;*/
+    display: flex;
+    /*alinhamento pai*/
+    justify-content: center;
+    /*alinhamento*/
+    align-items: center;
+    /*alinhamento*/
 }
 
-.orcamento-wrapper{
+.orcamento-wrapper {
     width: 60%;
     height: 80%;
     background-color: #e6e8e3;
@@ -563,13 +587,13 @@ header{
     position: relative;
 }
 
-.sessao-orcamento h1{
+.sessao-orcamento h1 {
     position: absolute;
     top: -2.5rem;
     left: 2rem;
-    background: #434343;  
-    background: -webkit-linear-gradient(to right, #000000, #434343); 
-    background: linear-gradient(to left, #000000, #434343); 
+    background: #434343;
+    background: -webkit-linear-gradient(to right, #000000, #434343);
+    background: linear-gradient(to left, #000000, #434343);
     color: #FFF;
     font-size: 3rem;
     padding: 0 3rem;
@@ -579,7 +603,7 @@ header{
     border-radius: 10px;
 }
 
-.sessao-orcamento form{
+.sessao-orcamento form {
     margin: 4rem;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -587,37 +611,39 @@ header{
     row-gap: 2rem;
 }
 
-.sessao-orcamento label{
+.sessao-orcamento label {
     font-family: var(--font-secundary);
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.sessao-orcamento input[type="number"]{
+.sessao-orcamento input[type="number"] {
     font-family: var(--font-secundary);
     width: 4rem;
     font-size: 2rem;
-    outline: none; /*remover bordas*/
+    outline: none;
+    /*remover bordas*/
     border-radius: 10px;
-    border: none;/*remover bordas*/
+    border: none;
+    /*remover bordas*/
     padding: 0.3rem;
 }
 
-.btn-orcamento{
+.btn-orcamento {
     text-transform: uppercase;
     padding: 1rem;
     cursor: pointer;
     grid-column: 2;
-    
+
 }
 
-.sessao-orcamento input[type="checkbox"]{    
-    width: 1rem;       
+.sessao-orcamento input[type="checkbox"] {
+    width: 1rem;
 }
 
 /*------------------------------------Footer-------------------------------------------*/
 
-footer{
+footer {
     width: 100%;
     height: 7rem;
     background-color: #17181b;
@@ -626,25 +652,25 @@ footer{
     align-items: center;
 }
 
-.footer-content{
+.footer-content {
     width: 60%;
     display: flex;
     justify-content: space-between;
 }
 
-.footer-content p{
+.footer-content p {
     font-family: var(--font-secundary);
     color: #a7a7a7;
     font-size: 1.2rem;
 }
 
-.social-list a{
+.social-list a {
     margin: 0 2rem;
-    color:#a7a7a7;
+    color: #a7a7a7;
     font-size: 1.3rem;
 }
 
-.social-list ul{
+.social-list ul {
     display: flex;
 
 }
@@ -664,197 +690,204 @@ footer{
     color: #FFF;    
 }*/
 
-@media (max-width:1000px) {    
-    .conhecimento-img-wrapper img{
-        display: none;      
+@media (max-width:1000px) {
+    .conhecimento-img-wrapper img {
+        display: none;
     }
 
-    .conhecimentos{
+    .conhecimentos {
         display: flex;
-        justify-content: space-between;  
-        flex-wrap: wrap;          
-        justify-content: center;             
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .conhecimento p{
+    .conhecimento p {
         width: 18rem;
-        height: 8rem; 
+        height: 8rem;
         padding-right: 1rem;
-        text-align: justify;      
+        text-align: justify;
     }
-   /*********************Projetos*********************/
 
-   .projetos{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;    
-}
+    /*********************Projetos*********************/
 
-    .card{
-    margin-bottom: 2rem;
-}
+    .projetos {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
 
-/*********************Orçamento*********************/
-.sessao-orcamento h1{   
-    font-size: 2rem;
-    padding: 0 1rem;   
-   
-}
+    .card {
+        margin-bottom: 2rem;
+    }
 
-.btn-orcamento{    
-    padding: 0.5rem;
-    font-size: 1rem;  
-    
-}
+    /*********************Orçamento*********************/
+    .sessao-orcamento h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
 
-/*.orcamento-wrapper{
+    }
+
+    .btn-orcamento {
+        padding: 0.5rem;
+        font-size: 1rem;
+
+    }
+
+    /*.orcamento-wrapper{
     width: 75%;   
 }*/
 
-.sessao-orcamento label{    
-    font-size: 1.5rem;
-    
-}
+    .sessao-orcamento label {
+        font-size: 1.5rem;
 
-.sessao-orcamento input[type="number"]{    
-    width: 3rem;
-    font-size: 1rem;   
-    padding: 0.3rem;
-    height: 2rem;
-}
+    }
+
+    .sessao-orcamento input[type="number"] {
+        width: 3rem;
+        font-size: 1rem;
+        padding: 0.3rem;
+        height: 2rem;
+    }
 
 
 }
 
 @media (max-width:850px) {
 
-    .banner{           
+    .banner {
         top: 15%;
-        left: 10%;      
+        left: 10%;
     }
+
     /*Contato*/
-    .sessao-contato{
+    .sessao-contato {
         height: 100%;
         /*sessao Pai*/
     }
-    
-    .contato-wrapper{        
-        box-shadow: 0 0rem 0rem rgba(0,0,0,0.5);   
+
+    .contato-wrapper {
+        box-shadow: 0 0rem 0rem rgba(0, 0, 0, 0.5);
     }
 
     /*Orçamento*/
-    .sessao-orcamento{
+    .sessao-orcamento {
         width: 100%;
         height: 100%;
-        margin-top: 5rem; /*sessao Pai*/
-        margin-bottom: 5rem;   
+        margin-top: 5rem;
+        /*sessao Pai*/
+        margin-bottom: 5rem;
     }
-    
-    .orcamento-wrapper{
-        width: 60%;          
+
+    .orcamento-wrapper {
+        width: 60%;
     }
-    
-    .sessao-orcamento h1{        
-        top: -1.5rem;    
+
+    .sessao-orcamento h1 {
+        top: -1.5rem;
         font-size: 2rem;
-        padding: 0 2rem;      
+        padding: 0 2rem;
     }
-    
-    .sessao-orcamento form{
+
+    .sessao-orcamento form {
         margin: 3rem;
-  
+
     }
-    
-    .sessao-orcamento label{        
-        font-size: 1rem;        
+
+    .sessao-orcamento label {
+        font-size: 1rem;
     }
-    
-    .sessao-orcamento input[type="number"]{        
+
+    .sessao-orcamento input[type="number"] {
         width: 2rem;
-        font-size: 1rem;       
+        font-size: 1rem;
     }
-    
-    .btn-orcamento{
-       font-size: 1rem; 
-       width: 75%;     
+
+    .btn-orcamento {
+        font-size: 1rem;
+        width: 75%;
     }
 
     /*Contato*/
-    .btn_submit{
-        font-size: 1rem;        
+    .btn_submit {
+        font-size: 1rem;
         width: 50%;
-      
+
     }
 }
 
 
 
 
-    @media (max-width:700px) {
-        /*Contato*/
-        .banner{           
-            top: 15%;
-            left: 7%;      
-        }
-    
-        .banner .whatsapp{
-            font-size: 1rem;
-            padding: 1rem 2rem 1rem 2rem;
-            text-align: center;
-        }
-    
-        .whatsapp i{
-            position: fixed;
-            left: 1.5rem;
-            top: 1rem;
-            color: #FFFFFF;
-            font-size: 1.5rem;
-        }    
-       
+@media (max-width:700px) {
 
-    .contato-right{
-        width: 75%;   
-        background-color: #eee;    
+    /*Contato*/
+    .banner {
+        top: 15%;
+        left: 7%;
     }
-    .contato-left{
+
+    .banner .whatsapp {
+        font-size: 1rem;
+        padding: 1rem 2rem 1rem 2rem;
+        text-align: center;
+    }
+
+    .whatsapp i {
+        position: fixed;
+        left: 1.5rem;
+        top: 1rem;
+        color: #FFFFFF;
+        font-size: 1.5rem;
+    }
+
+
+    .contato-right {
+        width: 75%;
+        background-color: #eee;
+    }
+
+    .contato-left {
         display: none;
     }
-    .contato-wrapper{
+
+    .contato-wrapper {
         width: 75%;
         background-color: #eee;
 
     }
 
-    .btn_submit{
-        font-size: 0.8rem;        
+    .btn_submit {
+        font-size: 0.8rem;
         width: 70%;
-      
+
     }
 
     /*Orçamento*/
 
-    .orcamento-wrapper{
-        width: 75%;          
+    .orcamento-wrapper {
+        width: 75%;
     }
 
-    .sessao-orcamento h1{        
-        top: -0.8rem;    
+    .sessao-orcamento h1 {
+        top: -0.8rem;
         font-size: 1.5rem;
-           
-    }
-    .btn-orcamento{
-        font-size: 0.8rem;       
-     }
 
-
-    .social-list{
-    display: none;
     }
 
-    .footer-content p{
-      font-size: 1rem;
+    .btn-orcamento {
+        font-size: 0.8rem;
     }
- 
+
+
+    .social-list {
+        display: none;
+    }
+
+    .footer-content p {
+        font-size: 1rem;
+    }
+
 
 
 
@@ -866,97 +899,100 @@ footer{
 @media (max-width:450px) {
 
     /*Banner*/
-    .banner h1{
+    .banner h1 {
         font-size: 2.5rem;
     }
 
-    .banner p{
+    .banner p {
         font-size: 1.5rem;
     }
-    .banner{           
+
+    .banner {
         top: 20%;
-        left: 7%;      
+        left: 7%;
     }
 
-    .banner .whatsapp{
+    .banner .whatsapp {
         font-size: 1rem;
         padding: 1rem 2rem 1rem 2rem;
     }
 
-    .whatsapp i{
+    .whatsapp i {
         position: fixed;
         left: 0.5rem;
         top: 1rem;
         color: #FFFFFF;
         font-size: 1.5rem;
     }
-     
-        /*Conhecimento*/
-    .conhecimento-img-wrapper img{
-        display: none;      
+
+    /*Conhecimento*/
+    .conhecimento-img-wrapper img {
+        display: none;
     }
 
-    .conhecimentos{
+    .conhecimentos {
         display: flex;
-        justify-content: space-between;  
-        flex-wrap: wrap;          
-        justify-content: center;             
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .conhecimento p{
+    .conhecimento p {
         width: 18rem;
-        height: 8rem; 
+        height: 8rem;
         padding-right: 1rem;
-        text-align: justify;      
-    }
-   /***Projetos**/
-
-   .projetos{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;    
+        text-align: justify;
     }
 
-    .card{
-    margin-bottom: 2rem;
+    /***Projetos**/
+
+    .projetos {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin-bottom: 2rem;
     }
 
     /***Contato***/
-   
-   
-    .contato-wrapper{
+
+
+    .contato-wrapper {
         width: 100%;
 
-    }  
- 
-   
-   
+    }
 
-    
+
+
+
+
 
     /*********************Orçamento*********************/
 
-    .sessao-orcamento h1{ 
-        top: -2rem;  
+    .sessao-orcamento h1 {
+        top: -2rem;
         font-size: 1rem;
-        padding:  1rem;   
-    
-    }
-    .orcamento-wrapper{
-        width: 100%;   
+        padding: 1rem;
+
     }
 
-    .sessao-orcamento label{    
-        font-size: 1rem;
-        
+    .orcamento-wrapper {
+        width: 100%;
     }
 
-    .sessao-orcamento input[type="number"]{    
+    .sessao-orcamento label {
+        font-size: 1rem;
+
+    }
+
+    .sessao-orcamento input[type="number"] {
         width: 2rem;
-        font-size: 1rem;   
+        font-size: 1rem;
         padding: 0.3rem;
         height: 1rem;
-    }       
+    }
 
     /*#link-whatsapp{/*Whatsapp   
         width: 2.5rem;
@@ -964,8 +1000,8 @@ footer{
         font-size: 2.1rem; /*tamanho do icone           
     }*/
 
- 
 
-      
+
+
 
 }
