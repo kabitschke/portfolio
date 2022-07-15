@@ -65,7 +65,9 @@ html{
 .hamburguer span{
     position: absolute;
     left: 3rem;
-    background-color: #85e328; 
+    background: #434343;  
+    background: -webkit-linear-gradient(to right, #000000, #434343); 
+    background: linear-gradient(to left, #000000, #434343); 
     height: 2rem;
     width: 6rem;
     display: flex;
@@ -81,7 +83,7 @@ html{
 .hamburguer span::before{/*faz a setinha*/
     content: "";
     position: absolute;
-    border-right: .5rem solid #85e328;
+    border-right: .5rem solid #434343;
     border-top: .5rem solid transparent;
     border-left: .5rem solid transparent;
     border-bottom: .5rem solid transparent;
@@ -105,7 +107,7 @@ header{
     overflow: hidden;    
     background-position: bottom;
     background-size: cover;
-    animation: zoom 5s;
+    animation: zoom 10s;
     background-color:rgba(0, 0, 0); 
    
 }
@@ -135,6 +137,17 @@ header{
     left: 15%;  
 
 }
+.banner h1::before{
+    content:"";
+    display:block;
+    width:130px;
+    height:100px;
+    background:url("imagens/detalhe.svg") no-repeat center;
+    position:absolute;
+    top:-15px;
+    left:-40px;
+    z-index:-1
+}
 
 .banner h1{
     color: #FFFFFF;
@@ -160,7 +173,7 @@ header{
 }
 
 .banner .whatsapp{
-    width: 30%;
+    display: inline;
     font-family: var(--font-action);
     color: #fff;
     font-size: 1.2rem;
@@ -168,17 +181,18 @@ header{
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;    
-    background-color: #58d565;
-    padding: 1rem 4rem 1rem 4rem; /*height right botton left*/ 
+    /*background-color: #58d565;*/
+    background: #434343;  
+    background: -webkit-linear-gradient(to right, #000000, #434343); 
+    background: linear-gradient(to left, #000000, #434343); 
+    padding: 1rem 3rem 1rem 3rem; /*height right botton left*/ 
     border: none;
     opacity: 0;
     animation: moveBanner 1s 0.9s forwards;
 
 }
 
-.whatsapp i{
-    position: fixed;
-    left:2.5rem;
+.whatsapp i{   
     color: #FFFFFF;
     font-size: 1.5rem;
 }
@@ -235,7 +249,7 @@ header{
 }
 
 .menu-link:hover{
-    color: #85e328;
+    color: #000;
 }
 
 .social-media{
@@ -319,7 +333,7 @@ header{
     font-family: var(--font-primary);
     font-size: 3rem;
     color: #4b4b4b;
-    border-bottom: solid 3px #85e328;    
+    border-bottom: solid 3px #434343;    
     margin-bottom: 1.5rem;
 }
 
@@ -404,7 +418,7 @@ header{
     font-family: var(--font-primary);
     font-size: 2rem;
     font-weight: 500;
-    color: #85e328;
+    color: #58d565;
 }
 
 .card-info h3{
@@ -648,21 +662,26 @@ footer{
     display: flex;
 
 }
-
-/*#link-whatsapp{
-    position: fixed; 
+.scrollbutton{
+    position: fixed;
     right: 3rem;
     bottom: 3rem;
-    width: 4rem;
-    height: 4rem;   
-    font-size: 3.2rem; 
-    background: #58d565; 
-    border-radius: 2rem;        
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFF;    
-}*/
+    width: 3rem;
+    height: 3rem;
+    background: #434343;  
+    background: -webkit-linear-gradient(to right, #000000, #434343); 
+    background: linear-gradient(to left, #000000, #434343);        
+    color: #fff;
+    border-radius: .3rem;
+    box-shadow:  0 0.1rem 0.6rem #00000009;
+    cursor: pointer;
+    display: none;    
+  }
+
+  .scrollbutton i{    
+    padding: 1rem;    
+  }
+
 
 @media (max-width:1000px) {    
     .conhecimento-img-wrapper img{
@@ -726,14 +745,6 @@ footer{
 
 }
 
-<<<<<<< HEAD
-
-@media (max-width:700px) {
-    /*********************Contato*********************/
-    .contato-right{
-        width: 75%;       
-      
-=======
 @media (max-width:850px) {
 
     .banner{           
@@ -794,10 +805,6 @@ footer{
       
     }
 }
-
-
-
-
     @media (max-width:700px) {
         /*Contato*/
         .banner{           
@@ -808,22 +815,13 @@ footer{
         .banner .whatsapp{
             font-size: 1rem;
             padding: 1rem 2rem 1rem 2rem;
-            text-align: center;
+            
         }
-    
-        .whatsapp i{
-            position: fixed;
-            left: 1.5rem;
-            top: 1rem;
-            color: #FFFFFF;
-            font-size: 1.5rem;
-        }    
-       
+
 
     .contato-right{
         width: 75%;   
         background-color: #eee;    
->>>>>>> a2342621c805716583cedf4febad881f2e02ff96
     }
     .contato-left{
         display: none;
@@ -863,11 +861,13 @@ footer{
     .footer-content p{
       font-size: 1rem;
     }
+
+    #link-topo{
+        font-size: 0.8rem;
+        width: 2rem;
+        height: 2rem;
+      }
  
-
-
-
-
 
 
 }
@@ -891,14 +891,31 @@ footer{
         font-size: 1rem;
         padding: 1rem 2rem 1rem 2rem;
     }
-
-    .whatsapp i{
-        position: fixed;
-        left: 0.5rem;
-        top: 1rem;
-        color: #FFFFFF;
-        font-size: 1.5rem;
+    /*Sidebar*/
+    .hamburguer span{     
+        height: 1.5rem;
+        width: 4rem;
+        font-size: .8rem;    
     }
+
+    .show-menu .hamburguer{
+        right: 8rem;
+    }
+
+    .sidebar{
+        width: 12rem;   
+    }  
+    
+    .menu-link{        
+        font-size: 1.5rem;  
+    }      
+    .social-media i{       
+        height: 2rem;
+        width: 2rem;
+        font-size: 1rem;   
+    }
+
+
      
         /*Conhecimento*/
     .conhecimento-img-wrapper img{
@@ -936,12 +953,7 @@ footer{
     .contato-wrapper{
         width: 100%;
 
-    }  
- 
-   
-   
-
-    
+    }      
 
     /*********************Orçamento*********************/
 
@@ -954,11 +966,6 @@ footer{
     .orcamento-wrapper{
         width: 100%;   
     }
-<<<<<<< HEAD
-    .banner button{
-        display: none;
-        }  
-=======
 
     .sessao-orcamento label{    
         font-size: 1rem;
@@ -970,17 +977,13 @@ footer{
         font-size: 1rem;   
         padding: 0.3rem;
         height: 1rem;
-    }       
+    }   
+    
+    #link-topo{
+        font-size: 0.8rem;
+        width: 2rem;
+        height: 2rem;
 
-    /*#link-whatsapp{/*Whatsapp   
-        width: 2.5rem;
-        height: 2.5rem;   
-        font-size: 2.1rem; /*tamanho do icone           
-    }*/
-
- 
-
->>>>>>> a2342621c805716583cedf4febad881f2e02ff96
-      
+      }
 
 }

@@ -33,3 +33,20 @@ function atualizaPreco(){
     
     document.querySelector("#preco").innerHTML = `R$ ${preco.toFixed(2)}`
 }
+
+function subirTela(){
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function BotaoScroll(){
+    if(window.scrollY <= 900){        
+        document.querySelector('.scrollbutton').style.display = 'none';
+    }else{        
+        document.querySelector('.scrollbutton').style.display = 'block';
+    }
+}
+
+window.addEventListener('scroll', BotaoScroll);
