@@ -720,10 +720,12 @@ footer{
 
 }
 
+
 @media (max-width:700px) {
     /*********************Contato*********************/
     .contato-right{
         width: 75%;       
+      
     }
     .contato-left{
         display: none;
@@ -787,8 +789,7 @@ footer{
     }
     .banner button{
         display: none;
-        }
-
+        }  
       
 
 }
