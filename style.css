@@ -908,6 +908,9 @@ footer {
 @media (max-width:450px) {
 
     /*Banner*/
+    .banner h1::before {       
+        width: 165px;  
+    }    
     .banner h1 {
         font-size: 2.5rem;
     }
