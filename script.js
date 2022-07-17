@@ -50,3 +50,15 @@ function BotaoScroll(){
 }
 
 window.addEventListener('scroll', BotaoScroll);
+
+function typeWriter(elemento){
+    const textoArray = elemento.innerHTML.split('');//transforma em array
+    elemento.innerHTML = '';//limpa o campo h1
+    textoArray.forEach((letra, i)=> {
+        setTimeout(()=> elemento.innerHTML += letra, 100 * i);//tempo multiplicado pelo indice de cada letra
+
+    });
+}
+
+const titulo = document.querySelector("#titulo");
+typeWriter(titulo);
